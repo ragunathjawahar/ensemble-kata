@@ -32,3 +32,4 @@ Please do the following before the event.
 
 - Ragunath Jawahar
 - Asif Shaikh
+- Subhrajyoti Sen
