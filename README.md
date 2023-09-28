@@ -20,6 +20,7 @@ Please do the following before the event.
 
 - Ensemble programming
 - Micro-commits
+- Trunk-based development
 - Test-driven development
 - Refactoring
 
