@@ -20,12 +20,12 @@ Please do the following before the event.
 
 - Ensemble programming
 - Micro-commits
-- Testing
+- Test-driven development
 - Refactoring
 
 ## Kata
 
-- Will add the instructions for the kata here.
+- Test-drive a solution for the [99 bottles of beer song](99-bottles-of-beer-song.txt).
 
 ## Participants
 
