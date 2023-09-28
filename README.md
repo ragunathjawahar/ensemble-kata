@@ -19,6 +19,7 @@ Please do the following before the event.
 ## Objectives
 
 - Ensemble programming
+- Micro-commits
 - Testing
 - Refactoring
 
