@@ -52,4 +52,24 @@ class StanzaTest {
       """.trimIndent()
     )
   }
+
+  @Test
+  fun `print consecutive stanzas`() {
+    // given
+    val stanza = Stanza()
+
+    //when
+    val text = stanza.drinkContinuously(10)
+
+    //then
+    assertThat(text).isEqualTo(
+      """
+      10 bottles of beer on the wall, 10 bottles of beer.
+      Take one down and pass it around, 9 bottles of beer on the wall.
+
+      9 bottles of beer on the wall, 9 bottles of beer.
+      Take one down and pass it around, 8 bottles of beer on the wall.
+      """.trimIndent()
+    )
+  }
 }
