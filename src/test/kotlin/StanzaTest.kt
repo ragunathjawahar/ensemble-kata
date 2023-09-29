@@ -18,4 +18,21 @@ class StanzaTest {
       """.trimIndent()
     )
   }
+
+  @Test
+  fun `print last stanza`() {
+    // given
+    val stanza = Stanza()
+
+    //when
+    val text = stanza.text(0)
+
+    //then
+    assertThat(text).isEqualTo(
+      """
+      No more bottles of beer on the wall, no more bottles of beer.
+      Go to the store and buy some more, 99 bottles of beer on the wall.
+      """.trimIndent()
+    )
+  }
 }
