@@ -5,10 +5,10 @@ class StanzaTest {
   @Test
   fun `print first stanza`() {
     // given
-    val stanza = Stanza();
+    val stanza = Stanza()
 
     //when
-    val text = stanza.text();
+    val text = stanza.text(99)
 
     //then
     assertThat(text).isEqualTo(
