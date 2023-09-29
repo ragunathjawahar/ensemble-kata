@@ -36,3 +36,4 @@ Please do the following before the event.
 - Manish Verma
 - Brett Schuchert
 - SaiCharan Sigiri
+- Neil Mathew
