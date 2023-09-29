@@ -1,5 +1,5 @@
 class Stanza {
-  fun text(beerCount: Int): String {
+  fun drink(beerCount: Int): String {
     if(beerCount == 0){
       return """
         No more bottles of beer on the wall, no more bottles of beer.

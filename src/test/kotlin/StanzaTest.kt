@@ -8,7 +8,7 @@ class StanzaTest {
     val stanza = Stanza()
 
     //when
-    val text = stanza.text(99)
+    val text = stanza.drink(99)
 
     //then
     assertThat(text).isEqualTo(
@@ -25,7 +25,7 @@ class StanzaTest {
     val stanza = Stanza()
 
     //when
-    val text = stanza.text(0)
+    val text = stanza.drink(0)
 
     //then
     assertThat(text).isEqualTo(
