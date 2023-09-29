@@ -37,3 +37,4 @@ Please do the following before the event.
 - Brett Schuchert
 - SaiCharan Sigiri
 - Neil Mathew
+- Ashish Krishnan
