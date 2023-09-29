@@ -35,4 +35,21 @@ class StanzaTest {
       """.trimIndent()
     )
   }
+
+  @Test
+  fun `print second last stanza`() {
+    // given
+    val stanza = Stanza()
+
+    //when
+    val text = stanza.drink(1)
+
+    //then
+    assertThat(text).isEqualTo(
+      """
+      1 bottle of beer on the wall, 1 bottle of beer.
+      Take one down and pass it around, no more bottles of beer on the wall.
+      """.trimIndent()
+    )
+  }
 }
