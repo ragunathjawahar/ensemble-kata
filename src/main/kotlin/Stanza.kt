@@ -25,6 +25,13 @@ class Stanza {
   }
 
   fun drinkContinuously(beerCount: Int): String {
-    return drink(beerCount) + "\n\n" + drink(beerCount - 1)
+    val builder = StringBuilder()
+
+    (beerCount downTo beerCount-1).forEach {
+      builder.append(drink(it))
+      builder.append("\n\n")
+    }
+
+    return builder.trim().toString();
   }
 }
