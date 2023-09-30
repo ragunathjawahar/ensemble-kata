@@ -20,9 +20,11 @@ class Stanza {
       }
 
       else -> {
+        val s = """$beerCount bottles"""
+        val s1 = """${beerCount - 1} bottles"""
         """
-      $beerCount bottles of beer on the wall, $beerCount bottles of beer.
-      Take one down and pass it around, ${beerCount - 1} bottles of beer on the wall.
+      $s of beer on the wall, $beerCount bottles of beer.
+      Take one down and pass it around, $s1 of beer on the wall.
     """
       }
     }.trimIndent()
