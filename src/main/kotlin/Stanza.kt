@@ -1,8 +1,22 @@
 class Stanza {
   fun drink(beerCount: Int): String {
+
+    val initialBeerCountStr = when (beerCount) {
+      0 -> {
+        """No more bottles"""
+      }
+
+      1 -> {
+        """1 bottle"""
+      }
+
+      else -> {
+        """$beerCount bottles"""
+      }
+    }
+
     return when (beerCount) {
       0 -> {
-        val initialBeerCountStr = """No more bottles"""
         val leftOutBeerCountStr = """99 bottles"""
         val initialBeerCountLowerCaseStr = initialBeerCountStr.replaceFirstChar { it.toLowerCase() }
         """
@@ -12,7 +26,6 @@ class Stanza {
       }
 
       1 -> {
-        val initialBeerCountStr = """1 bottle"""
         val leftOutBeerCountStr = """no more bottles"""
         """
         $initialBeerCountStr of beer on the wall, $initialBeerCountStr of beer.
@@ -21,7 +34,6 @@ class Stanza {
       }
 
       else -> {
-        val initialBeerCountStr = """$beerCount bottles"""
         val leftOutBeerCountStr = """${beerCount - 1} bottles"""
         """
       $initialBeerCountStr of beer on the wall, $initialBeerCountStr of beer.
@@ -34,7 +46,7 @@ class Stanza {
   fun drinkContinuously(beerCount: Int): String {
     val builder = StringBuilder()
 
-    (beerCount downTo beerCount-1).forEach {
+    (beerCount downTo beerCount - 1).forEach {
       builder.append(drink(it))
       builder.append("\n\n")
     }
