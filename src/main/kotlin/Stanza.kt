@@ -4,21 +4,21 @@ class Stanza {
     val initialBeerCountStr = getInitialBeerCountStr(beerCount)
     val leftOutBeerCountStr = getLeftOutBeerCount(beerCount)
 
-    val initialBeerCountStrOnWall = """$initialBeerCountStr of beer on the wall"""
-    val leftOutBeerCountStrOnWall = """$leftOutBeerCountStr of beer on the wall."""
+    val initialBeerCountStrOnWall = """$initialBeerCountStr on the wall"""
+    val leftOutBeerCountStrOnWall = """$leftOutBeerCountStr on the wall"""
 
     return when (beerCount) {
       0 -> {
         val initialBeerCountLowerCaseStr = initialBeerCountStr.replaceFirstChar { it.toLowerCase() }
         """
-        $initialBeerCountStrOnWall, $initialBeerCountLowerCaseStr of beer.
-        Go to the store and buy some more, $leftOutBeerCountStrOnWall
+        $initialBeerCountStrOnWall, ${initialBeerCountLowerCaseStr}.
+        Go to the store and buy some more, ${leftOutBeerCountStrOnWall}.
       """
       }
       else -> {
         """
-      $initialBeerCountStrOnWall, $initialBeerCountStr of beer.
-      Take one down and pass it around, $leftOutBeerCountStrOnWall
+      $initialBeerCountStrOnWall, ${initialBeerCountStr}.
+      Take one down and pass it around, ${leftOutBeerCountStrOnWall}.
     """
       }
     }.trimIndent()
@@ -38,7 +38,7 @@ class Stanza {
         """${beerCount - 1} bottles"""
       }
       }
-    return leftOutBeerCountStr
+    return "$leftOutBeerCountStr of beer"
   }
 
   private fun getInitialBeerCountStr(beerCount: Int): String {
@@ -55,7 +55,7 @@ class Stanza {
         """$beerCount bottles"""
       }
       }
-    return initialBeerCountStr
+    return "$initialBeerCountStr of beer"
   }
 
   fun drinkContinuously(beerCount: Int): String {
