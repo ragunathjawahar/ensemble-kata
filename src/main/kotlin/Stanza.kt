@@ -15,6 +15,7 @@ class Stanza {
         Go to the store and buy some more, ${leftOutBeerCountStrOnWall}.
       """
       }
+
       else -> {
         """
       $initialBeerCountStrOnWall, ${initialBeerCountStr}.
@@ -38,10 +39,14 @@ class Stanza {
         """no more bottles"""
       }
 
+      2 -> {
+        """1 bottle"""
+      }
+
       else -> {
         """${beerCount - 1} bottles"""
       }
-      }
+    }
     return "$leftOutBeerCountStr of beer"
   }
 
@@ -58,7 +63,7 @@ class Stanza {
       else -> {
         """$beerCount bottles"""
       }
-      }
+    }
     return "$initialBeerCountStr of beer"
   }
 
