@@ -1,19 +1,7 @@
 class Stanza {
   fun drink(beerCount: Int): String {
 
-    val initialBeerCountStr = when (beerCount) {
-      0 -> {
-        """No more bottles"""
-      }
-
-      1 -> {
-        """1 bottle"""
-      }
-
-      else -> {
-        """$beerCount bottles"""
-      }
-    }
+    val initialBeerCountStr = getInitialBeerCountStr(beerCount)
 
     return when (beerCount) {
       0 -> {
@@ -41,6 +29,23 @@ class Stanza {
     """
       }
     }.trimIndent()
+  }
+
+  private fun getInitialBeerCountStr(beerCount: Int): String {
+    val initialBeerCountStr = when (beerCount) {
+      0 -> {
+        """No more bottles"""
+      }
+
+      1 -> {
+        """1 bottle"""
+      }
+
+      else -> {
+        """$beerCount bottles"""
+      }
+      }
+    return initialBeerCountStr
   }
 
   fun drinkContinuously(beerCount: Int): String {
