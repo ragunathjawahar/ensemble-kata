@@ -65,7 +65,7 @@ class Stanza {
   fun drinkContinuously(beerCount: Int): String {
     val builder = StringBuilder()
 
-    (beerCount downTo beerCount - 1).forEach {
+    (beerCount downTo 0).forEach {
       builder.append(drink(it))
       builder.append("\n\n")
     }

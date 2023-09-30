@@ -1,4 +1,5 @@
 import com.google.common.truth.Truth.assertThat
+import org.approvaltests.Approvals
 import org.junit.jupiter.api.Test
 
 class StanzaTest {
@@ -59,17 +60,9 @@ class StanzaTest {
     val stanza = Stanza()
 
     //when
-    val text = stanza.drinkContinuously(10)
+    val text = stanza.drinkContinuously(99)
 
     //then
-    assertThat(text).isEqualTo(
-      """
-      10 bottles of beer on the wall, 10 bottles of beer.
-      Take one down and pass it around, 9 bottles of beer on the wall.
-
-      9 bottles of beer on the wall, 9 bottles of beer.
-      Take one down and pass it around, 8 bottles of beer on the wall.
-      """.trimIndent()
-    )
+    Approvals.verify(text)
   }
 }
