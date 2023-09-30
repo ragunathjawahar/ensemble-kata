@@ -12,14 +12,6 @@ class Stanza {
         Go to the store and buy some more, $leftOutBeerCountStr of beer on the wall.
       """
       }
-
-      1 -> {
-        """
-        $initialBeerCountStr of beer on the wall, $initialBeerCountStr of beer.
-        Take one down and pass it around, $leftOutBeerCountStr of beer on the wall.
-      """
-      }
-
       else -> {
         """
       $initialBeerCountStr of beer on the wall, $initialBeerCountStr of beer.
