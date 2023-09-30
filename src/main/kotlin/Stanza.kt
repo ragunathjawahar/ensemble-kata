@@ -11,9 +11,11 @@ class Stanza {
       }
 
       1 -> {
+        val s = """1 bottle"""
+        val s1 = """no more bottles"""
         """
-        1 bottle of beer on the wall, 1 bottle of beer.
-        Take one down and pass it around, no more bottles of beer on the wall.
+        $s of beer on the wall, 1 bottle of beer.
+        Take one down and pass it around, $s1 of beer on the wall.
       """
       }
 
