@@ -4,8 +4,9 @@ class Stanza {
       0 -> {
         val initialBeerCountStr = """No more bottles"""
         val leftOutBeerCountStr = """99 bottles"""
+        val initialBeerCountLowerCaseStr = initialBeerCountStr.replaceFirstChar { it.toLowerCase() }
         """
-        $initialBeerCountStr of beer on the wall, no more bottles of beer.
+        $initialBeerCountStr of beer on the wall, $initialBeerCountLowerCaseStr of beer.
         Go to the store and buy some more, $leftOutBeerCountStr of beer on the wall.
       """
       }
