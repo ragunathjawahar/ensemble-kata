@@ -14,7 +14,7 @@ class Stanza {
         val initialBeerCountStr = """1 bottle"""
         val leftOutBeerCountStr = """no more bottles"""
         """
-        $initialBeerCountStr of beer on the wall, 1 bottle of beer.
+        $initialBeerCountStr of beer on the wall, $initialBeerCountStr of beer.
         Take one down and pass it around, $leftOutBeerCountStr of beer on the wall.
       """
       }
@@ -23,7 +23,7 @@ class Stanza {
         val initialBeerCountStr = """$beerCount bottles"""
         val leftOutBeerCountStr = """${beerCount - 1} bottles"""
         """
-      $initialBeerCountStr of beer on the wall, $beerCount bottles of beer.
+      $initialBeerCountStr of beer on the wall, $initialBeerCountStr of beer.
       Take one down and pass it around, $leftOutBeerCountStr of beer on the wall.
     """
       }
