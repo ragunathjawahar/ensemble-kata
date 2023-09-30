@@ -3,9 +3,10 @@ class Stanza {
     return when (beerCount) {
       0 -> {
         val initialBeerCountStr = """No more bottles"""
+        val leftOutBeerCountStr = """99 bottles"""
         """
         $initialBeerCountStr of beer on the wall, no more bottles of beer.
-        Go to the store and buy some more, 99 bottles of beer on the wall.
+        Go to the store and buy some more, $leftOutBeerCountStr of beer on the wall.
       """
       }
 
