@@ -4,8 +4,8 @@ class Stanza {
     val initialBeerCountStr = getInitialBeerCountStr(beerCount)
     val leftOutBeerCountStr = getLeftOutBeerCount(beerCount)
 
-    val initialBeerCountStrOnWall = """$initialBeerCountStr on the wall"""
-    val leftOutBeerCountStrOnWall = """$leftOutBeerCountStr on the wall"""
+    val initialBeerCountStrOnWall = getStrBeersCountOnWall(initialBeerCountStr)
+    val leftOutBeerCountStrOnWall = getStrBeersCountOnWall(leftOutBeerCountStr)
 
     return when (beerCount) {
       0 -> {
@@ -22,6 +22,10 @@ class Stanza {
     """
       }
     }.trimIndent()
+  }
+
+  private fun getStrBeersCountOnWall(beerCountStr: String): String {
+    return """$beerCountStr on the wall"""
   }
 
   private fun getLeftOutBeerCount(beerCount: Int): String {
