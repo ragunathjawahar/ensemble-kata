@@ -2,10 +2,20 @@ class Stanza {
   fun drink(beerCount: Int): String {
 
     val initialBeerCountStr = getInitialBeerCountStr(beerCount)
+    val leftOutBeerCountStr = when(beerCount){
+      0 -> {
+        """99 bottles"""
+      }
+      1->{
+        """no more bottles"""
+      }
+      else ->{
+        """${beerCount - 1} bottles"""
+      }
+    }
 
     return when (beerCount) {
       0 -> {
-        val leftOutBeerCountStr = """99 bottles"""
         val initialBeerCountLowerCaseStr = initialBeerCountStr.replaceFirstChar { it.toLowerCase() }
         """
         $initialBeerCountStr of beer on the wall, $initialBeerCountLowerCaseStr of beer.
@@ -14,7 +24,6 @@ class Stanza {
       }
 
       1 -> {
-        val leftOutBeerCountStr = """no more bottles"""
         """
         $initialBeerCountStr of beer on the wall, $initialBeerCountStr of beer.
         Take one down and pass it around, $leftOutBeerCountStr of beer on the wall.
@@ -22,7 +31,6 @@ class Stanza {
       }
 
       else -> {
-        val leftOutBeerCountStr = """${beerCount - 1} bottles"""
         """
       $initialBeerCountStr of beer on the wall, $initialBeerCountStr of beer.
       Take one down and pass it around, $leftOutBeerCountStr of beer on the wall.
