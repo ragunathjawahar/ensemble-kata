@@ -4,18 +4,21 @@ class Stanza {
     val initialBeerCountStr = getInitialBeerCountStr(beerCount)
     val leftOutBeerCountStr = getLeftOutBeerCount(beerCount)
 
+    val initialBeerCountStrOnWall = """$initialBeerCountStr of beer on the wall"""
+    val leftOutBeerCountStrOnWall = """$leftOutBeerCountStr of beer on the wall."""
+
     return when (beerCount) {
       0 -> {
         val initialBeerCountLowerCaseStr = initialBeerCountStr.replaceFirstChar { it.toLowerCase() }
         """
-        $initialBeerCountStr of beer on the wall, $initialBeerCountLowerCaseStr of beer.
-        Go to the store and buy some more, $leftOutBeerCountStr of beer on the wall.
+        $initialBeerCountStrOnWall, $initialBeerCountLowerCaseStr of beer.
+        Go to the store and buy some more, $leftOutBeerCountStrOnWall
       """
       }
       else -> {
         """
-      $initialBeerCountStr of beer on the wall, $initialBeerCountStr of beer.
-      Take one down and pass it around, $leftOutBeerCountStr of beer on the wall.
+      $initialBeerCountStrOnWall, $initialBeerCountStr of beer.
+      Take one down and pass it around, $leftOutBeerCountStrOnWall
     """
       }
     }.trimIndent()
