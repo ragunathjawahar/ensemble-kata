@@ -9,7 +9,7 @@ class Stanza {
 
     return when (beerCount) {
       0 -> {
-        val initialBeerCountLowerCaseStr = initialBeerCountStr.replaceFirstChar { it.toLowerCase() }
+        val initialBeerCountLowerCaseStr = initialBeerCountStr.replaceFirstChar { it.lowercaseChar() }
         """
         $initialBeerCountStrOnWall, ${initialBeerCountLowerCaseStr}.
         Go to the store and buy some more, ${leftOutBeerCountStrOnWall}.
